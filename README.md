@@ -23,21 +23,19 @@ Integration tests for CRUD operations on `/api/books` endpoint:
 
 ##  Testing Setup
 
-###  Dependencies
+####  Dependencies
 
-```bash
 npm install --save-dev jest supertest
 
----
-
-##  Configuration
+####  Configuration
 
 "scripts": {
   "test": "jest --coverage"
 }
 
+---
 
-# Project Structure
+## Project Structure
 
 - library-api/
 - ├── models/
@@ -57,16 +55,17 @@ npm install --save-dev jest supertest
 - ├── server.js
 - └── package.json
 
-# Coverage Example
+---
 
---------------------|---------|----------|---------|---------|
+## Coverage Example
+
 File                | % Stmts | % Branch | % Funcs | % Lines |
 --------------------|---------|----------|---------|---------|
 All files           |   80.00 |    90.00 |   40.00 |   82.00 |
  models/Book.js     |  100.00 |  100.00  |  100.00 |  100.00 |
  routes/books.js    |   88.88 |  100.00  |  100.00 |   88.88 |
  server.js          |   66.66 |   75.00  |     0.0 |   70.00 |
---------------------|---------|----------|---------|---------|
 
-#Run Tests
+
+## Run Tests
  npm test
