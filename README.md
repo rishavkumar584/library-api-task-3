@@ -1,22 +1,23 @@
 # Library API - Test Suite 
 
-This project includes a test suite for the Library API built using **Jest** and **Supertest**. It covers both **unit** and **integration** tests for MongoDB models and API endpoints.
+This project includes a test suite for the **Library API** built using **Jest** and **Supertest**. It covers both **unit** and **integration** tests for MongoDB models and API endpoints.
 
 ---
-# Test Cases
 
-### `Book.js` (Model)
-- Ensures that the Mongoose schema for `Book` works as expected.
-- Validates required fields like `title`, `author`, and `publishedYear`.
+##  Test Cases
 
-###  `books.js` (Routes)
-- Integration tests for CRUD operations on the `/api/books` endpoint:
-  - Create a book
-  - Fetch all books
-  - Fetch a specific book
-  - Update a book
-  - Delete a book
-  - Fail gracefully on missing/invalid data
+###  `models/Book.js`
+- Validates the Mongoose schema.
+- Ensures required fields like `title`, `author`, and `publishedYear` are present and properly validated.
+
+###  `routes/books.js`
+Integration tests for CRUD operations on `/api/books` endpoint:
+-  Create a new book
+-  Fetch all books
+-  Fetch a specific book by ID
+-  Update a book
+-  Delete a book
+-  Handles invalid data or missing fields gracefully
 
 ---
 
@@ -27,17 +28,16 @@ This project includes a test suite for the Library API built using **Jest** and 
 ```bash
 npm install --save-dev jest supertest
 
+---
 
-## Configuration
+##  Configuration
 
-In package.json, update the test script:
 "scripts": {
   "test": "jest --coverage"
 }
 
----
 
-###Project Structure
+# Project Structure
 
 - library-api/
 - ├── models/
@@ -57,7 +57,6 @@ In package.json, update the test script:
 - ├── server.js
 - └── package.json
 
-
 # Coverage Example
 
 --------------------|---------|----------|---------|---------|
@@ -69,5 +68,5 @@ All files           |   80.00 |    90.00 |   40.00 |   82.00 |
  server.js          |   66.66 |   75.00  |     0.0 |   70.00 |
 --------------------|---------|----------|---------|---------|
 
-# Run Tests
-  npm test
+#Run Tests
+ npm test
